@@ -12,6 +12,7 @@ public class Main {
         // Test out your Divide() function!
 
 //        Divide(2, 0);
+        Divide(157,1);
 
 
         HashMap<String, String> studentFiles = new HashMap<>();
@@ -30,8 +31,13 @@ public class Main {
     public static void Divide(int x, int y) {
         // Write code here!
         if (y <= 0) {
-            throw new ArithmeticException("you can't Divide by 0!");
+            try{
+                throw new ArithmeticException("you can't Divide by 0!");
+            } catch (ArithmeticException e) {
+                e.printStackTrace();
+            }
         }
+        System.out.println(x / y);
     }
 
     public static int CheckFileExtension(String fileName) {
